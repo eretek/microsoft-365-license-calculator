@@ -1,0 +1,41 @@
+{
+ "tests": [
+  {
+   "in": {
+    "roles": "A;80;E3",
+    "have": "E3;75;10"
+   },
+   "v": {
+    "gaps": {
+     "E3": 5
+    }
+   }
+  },
+  {
+   "in": {
+    "roles": "A;10;E3;Teams Phone\nB;5;F3",
+    "have": "E3;12\nF3;5"
+   },
+   "v": {
+    "gaps": {
+     "E3": -2,
+     "Teams Phone": 10,
+     "F3": 0
+    }
+   }
+  },
+  {
+   "in": {
+    "roles": "A;x;E3"
+   },
+   "err": "roles"
+  },
+  {
+   "in": {
+    "roles": "A;1;E3",
+    "have": "E3;1;abc"
+   },
+   "err": "have"
+  }
+ ]
+}
